@@ -36,18 +36,20 @@ namespace LineComparision
 
             double Length2 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)); //apply formula
 
-            bool status = Length1.Equals(Length2);  //compare both double values using Equals(Double) method
-
-            if (status)
+            if (Length1.Equals(Length2))
             {
                 Console.WriteLine("Length of Line1 = Length of Line2 ");
             }
 
+            else if (Length1 > Length2)
+            {
+                Console.WriteLine("Length of Line1  is Greater Than Length of Line2");
+            }
             else
             {
-                Console.WriteLine("Length of Line1  is not equal to Length of Line2");
-
+                Console.WriteLine("Length of Line1  is Less Than Length of Line2");
             }
+
             Console.WriteLine("The Length of Line1 is  " + Length1);  //finaly print output
             Console.WriteLine("The Length of Line2 is  " + Length2);  //finaly print output
             Console.Read();
